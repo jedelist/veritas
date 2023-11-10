@@ -14,7 +14,7 @@ import nibabel as nib
 
 # Custom Imports
 from veritas.utils import PathTools, JsonTools
-from vesselsynth.vesselsynth.utils import backend
+#from vesselsynth.vesselsynth.utils import backend
 from vesselsynth.vesselsynth.io import default_affine
 from vesselsynth.vesselsynth.synth import SynthVesselOCT
 from cornucopia.cornucopia.labels import RandomSmoothLabelMap
@@ -51,7 +51,7 @@ class VesselSynth(object):
         os.environ['CUDA_VISIBLE_DEVICES'] = '0'
         #import interpol
         #interpol.backend.jitfields=True
-        backend.jitfields = True
+        #backend.jitfields = True
 
         self.device = device
         self.json_params = json.load(open(json_param_path))   # This is the json file that should be one directory above this one. Defines all variables
